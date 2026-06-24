@@ -22,6 +22,9 @@ spring:
         hbm2ddl.create_namespaces: true
   kafka:
     bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     consumer:
       group-id: inventory-group
       auto-offset-reset: earliest
@@ -37,6 +40,8 @@ app:
   kafka:
     topic:
       order-created: order-events
+      inventory-reserved: inventory-reserved-events
+      inventory-failed: inventory-failed-events
 
 eureka:
   instance:

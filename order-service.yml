@@ -43,6 +43,8 @@ app:
     topic:
       user-created: user-events
       order-created: order-events
+      inventory-reserved: inventory-reserved-events
+      inventory-failed: inventory-failed-events
 
 eureka:
   instance:
