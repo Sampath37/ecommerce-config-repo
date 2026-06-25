@@ -42,6 +42,7 @@ app:
   kafka:
     topic:
       order-created: order-events
+      inventory-reserved: inventory-reserved-events
       payment-success: payment-events
 
 eureka:

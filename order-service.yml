@@ -45,6 +45,8 @@ app:
       order-created: order-events
       inventory-reserved: inventory-reserved-events
       inventory-failed: inventory-failed-events
+      payment-success: payment-events
+      payment-failed: payment-events
 
 eureka:
   instance:
