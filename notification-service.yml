@@ -36,6 +36,8 @@ app:
     topic:
       user-created: user-events
       order-created: order-events
+      payment-success: payment-events
+      payment-failed: payment-events
 
 eureka:
   instance:
