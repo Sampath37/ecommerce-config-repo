@@ -4,6 +4,17 @@ server:
 spring:
   application:
     name: email-service
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: sampathballa47@gmail.com
+    password: vvzk nbba ooby ujxq
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   datasource:
     url: jdbc:postgresql://localhost:5432/ecommerce_db?currentSchema=email_schema
     username: postgres
@@ -28,7 +39,7 @@ spring:
       properties:
         spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
         spring.json.trusted.packages: "*"
-        spring.json.value.default.type: java.util.HashMap
+        spring.json.value.default.type: com.example.ecommerce.emailservice.dto.PaymentDto
         spring.json.use.type.headers: false
 
 app:
